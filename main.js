@@ -2156,11 +2156,60 @@ const products = [
 
 
 
+// function countStartingLetters(array) {
+
+//   let letterCount = {};
+  
+//   array.forEach((element) => {
+    
+//     let firstLetter = element.name.charAt(0).toUpperCase();
+    
+//      if (letterCount[firstLetter]) {
+     
+//         letterCount[firstLetter]++;
+        
+//      } else {
+        
+//         letterCount[firstLetter] = 1;
+        
+//    }
+//  });
+  
+  
+//   let result = [];
+  
+//  for (let key in letterCount) {
+//     result.push({
+//       letter: key,
+//       count: letterCount[key],
+//     });
+//  }
+
+//  return result;
+// }
+
+
+// console.log(countStartingLetters(countries));
+
 // Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
+
+// const getFirstTenCountries=(Array)=>{
+// return Array.slice(0,10)
+// }
+// console.log(getFirstTenCountries(countriesData));
 
 // Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
 
+// const getLastTenCountries=(Array)=>{
+//   let arrayLastIndex=Array.length-1
+//   let arrayLast10Index=Array.length-11
+// return Array.slice(arrayLast10Index,arrayLastIndex)
+// }
+// console.log(getLastTenCountries(countriesData));
+
 // Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
+
+
 
 // Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
 
