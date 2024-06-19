@@ -2012,7 +2012,7 @@ const countriesData = [
   },
 ];
 
-const countries = ["US", "Sweden", "Denmark", "Norway", "IceLand", "Ecuador"];
+const countries = ["US", "Sweden", "Denmark", "Norway", "IceLand"];
 const names = ["Joseph", "Mathias", "Elias", "Brook"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const products = [
@@ -2032,187 +2032,223 @@ const products = [
 // numbers.forEach((number) => console.log(number));
 // Utiliza map para crear un nuevo array cambiando cada país a mayúsculas en el array de países.
 
-// const countriesToUpperCase = countries.map((countrie) =>
-//   countrie.toUpperCase()
-// );
+const countriesToUpperCase = countries.map((countrie) =>
+  countrie.toUpperCase()
+);
 // console.log(countriesToUpperCase);
 // Utilice map para crear una matriz de longitudes de países a partir de la matriz de países.
-// const countriesLarge = countries.map(
-//   (countrie) => countrie + " " + countrie.length
-// );
+const countriesLarge = countries.map(
+  (countrie) => countrie + " " + countrie.length
+);
 // console.log(countriesLarge);
 // Usa map para crear un nuevo array cambiando cada número al cuadrado en el array de números.
-// const numbersUp = numbers.map((number) => number ** 2);
+const numbersUp = numbers.map((number) => number ** 2);
 // console.log(numbersUp);
 // Utilice map para cambiar cada nombre a mayúsculas en la matriz de nombres.
-// const namesToUpperCase = names.map((name) => name.toUpperCase());
+const namesToUpperCase = names.map((name) => name.toUpperCase());
 // console.log(namesToUpperCase);
 // Utilice map para asignar la matriz de productos a sus precios correspondientes.
-// const pricesProducts = products.map((product) => (products.price = products));
+const pricesProducts = products.map((product) => (products.price = products));
 // console.log(pricesProducts);
 // Utilice filter para filtrar los países que contienen land.
-// const landChartsCountries = countries.filter((countrie) =>
-//   countrie.toLowerCase().includes("land")
-// );
+const landChartsCountries = countries.filter((countrie) =>
+  countrie.toLowerCase().includes("land")
+);
 // console.log(landChartsCountries);
 // Utilice filter para filtrar los países que tienen seis caracteres.
 
-// const sixChartsCountries = countries.filter(
-//   (countrie) => countrie.length === 6
-// );
+const sixChartsCountries = countries.filter(
+  (countrie) => countrie.length === 6
+);
 // console.log(sixChartsCountries);
 // Utilice filter para filtrar los países que contengan seis letras o más en el array de países.
 
-// const sixOurMoreChartsCountries = countries.filter(
-//   (countrie) => countrie.length >= 6
-// );
+const sixOurMoreChartsCountries = countries.filter(
+  (countrie) => countrie.length >= 6
+);
 // console.log(sixOurMoreChartsCountries);
 
 // Utilice filter para filtrar los países que empiezan por "E";
 
-// const countriesStarWithE = countries.filter((countrie) =>
-//   countrie[0].toLowerCase().includes("e")
-// );
+const countriesStarWithE = countries.filter((countrie) =>
+  countrie[0].toLowerCase().includes("e")
+);
 // console.log(countriesStarWithE);
 
 // Utilice filter para filtrar sólo los precios con valores.
 
-// const picesWithValue= products.filter((product)=>typeof product.price==="number")
+const picesWithValue = products.filter(
+  (product) => typeof product.price === "number"
+);
 // console.log(picesWithValue);
 
 // Declara una función llamada getStringLists que toma un array como parámetro y devuelve un array sólo con elementos string.
 
-// const getStringLists = (array) => {
-//   array.filter((elemnent) => typeof elemnent === "string")
-// };
+const getStringLists = (array) => {
+  array.filter((elemnent) => typeof elemnent === "string");
+};
 
 // Usa reduce para sumar todos los números del array de números.
 
-// const sumNumbers=numbers.reduce((a,b)=>a+b,0)
+const sumNumbers = numbers.reduce((a, b) => a + b, 0);
 // console.log(sumNumbers);
 
 // Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
-// const northCountries=countries.reduce((a,b,i)=>{
-// if (i===countries.length-1) {return a + " y " + b + " son países del norte de Europa"
-
-// }
-// else{ return a + ", " + b}
-
-// })
+const northCountries = countries.reduce((a, b, i) => {
+  if (i === countries.length - 1) {
+    return a + " y " + b + " son países del norte de Europa";
+  } else {
+    return a + ", " + b;
+  }
+});
 // console.log(northCountries);
 
 // Explique la diferencia entre some y every
 
+// uno regresa una respuesta basado a todos los elementos y el otro basado si 2 o mas elementos cumplen la condicion
+
 // Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
 
-// const sevenChartsNames = names.some(
-//   (name) => name.length >7)
+const sevenChartsNames = names.some((name) => name.length > 7);
 //   console.log(sevenChartsNames);
 
 // Utilice every para comprobar si todos los países contienen la palabra land.
 
-// const landCountries = countries.every(
-//   (countrie) => countrie.toLowerCase().includes("land"))
+const landCountries = countries.every((countrie) =>
+  countrie.toLowerCase().includes("land")
+);
 //   console.log(landCountries);
 
 // Explique la diferencia entre find y findIndex.
 
+//uno regresa el primer elemento que cumpla con la condicion y el otro regresa el indice del primer elemnto que cumpla con la direccion
+
 // Utilice find para encontrar el primer país que contenga sólo seis letras en el array de países.
 
-// const firstCountrieWithsixChater = countries.find(
-//   (countrie) => countrie.length ===6)
+const firstCountrieWithsixChater = countries.find(
+  (countrie) => countrie.length === 6
+);
 //   console.log(firstCountrieWithsixChater);
 
 // Utilice findIndex para encontrar la posición del primer país que contenga sólo seis letras en el array de países.
 
-// const firstIndexCountrieWithsixChater = countries.findIndex(
-//   (countrie) => countrie.length ===6)
+const firstIndexCountrieWithsixChater = countries.findIndex(
+  (countrie) => countrie.length === 6
+);
 //   console.log(firstIndexCountrieWithsixChater);
 
 // Utilice findIndex para encontrar la posición de Norway si no existe en el array obtendrá -1.
 
-// const indexNorway = countries.findIndex(
-//   (countrie) => countrie.toLowerCase() ==="norway")
+const indexNorway = countries.findIndex(
+  (countrie) => countrie.toLowerCase() === "norway"
+);
 //   console.log(indexNorway);
 
 // Utilice findIndex para encontrar la posición de Russia si no existe en el array obtendrá -1.
 
-// const indexRussia = countries.findIndex(
-//   (countrie) => countrie.toLowerCase() ==="russia")
+const indexRussia = countries.findIndex(
+  (countrie) => countrie.toLowerCase() === "russia"
+);
 //   console.log(indexRussia);
 
 // Encuentre la suma del precio de los productos usando sólo reduce(callback)).
 
-// const addPrice = products.reduce((a, product) => {
-//   if (typeof product.price === "number") {
-//     return a + product.price;
-//   } else {
-//     return a;
-//   }
-// }, 0);
+const addPrice = products.reduce((a, product) => {
+  if (typeof product.price === "number") {
+    return a + product.price;
+  } else {
+    return a;
+  }
+}, 0);
 // console.log(addPrice);
 
 // Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
 
+function countStartingLetters(array) {
+  let letterCount = {};
 
+  array.forEach((element) => {
+    let firstLetter = element.name.charAt(0).toUpperCase();
 
-// function countStartingLetters(array) {
+    if (letterCount[firstLetter]) {
+      letterCount[firstLetter]++;
+    } else {
+      letterCount[firstLetter] = 1;
+    }
+  });
 
-//   let letterCount = {};
-  
-//   array.forEach((element) => {
-    
-//     let firstLetter = element.name.charAt(0).toUpperCase();
-    
-//      if (letterCount[firstLetter]) {
-     
-//         letterCount[firstLetter]++;
-        
-//      } else {
-        
-//         letterCount[firstLetter] = 1;
-        
-//    }
-//  });
-  
-  
-//   let result = [];
-  
-//  for (let key in letterCount) {
-//     result.push({
-//       letter: key,
-//       count: letterCount[key],
-//     });
-//  }
+  let result = [];
 
-//  return result;
-// }
+  for (let key in letterCount) {
+    result.push({
+      letter: key,
+      count: letterCount[key],
+    });
+  }
 
+  return result;
+}
 
 // console.log(countStartingLetters(countries));
 
 // Declara una función getFirstTenCountries y retorna un array de diez países. Utiliza diferente programación funcional para trabajar en el array countries.js.
 
-// const getFirstTenCountries=(Array)=>{
-// return Array.slice(0,10)
-// }
+const getFirstTenCountries = (Array) => {
+  return Array.slice(0, 10);
+};
 // console.log(getFirstTenCountries(countriesData));
 
 // Declara una función getLastTenCountries que devuelve los últimos diez países del array de países.
 
-// const getLastTenCountries=(Array)=>{
-//   let arrayLastIndex=Array.length-1
-//   let arrayLast10Index=Array.length-11
-// return Array.slice(arrayLast10Index,arrayLastIndex)
-// }
+const getLastTenCountries = (Array) => {
+  let arrayLastIndex = Array.length - 1;
+  let arrayLast10Index = Array.length - 11;
+  return Array.slice(arrayLast10Index, arrayLastIndex);
+};
 // console.log(getLastTenCountries(countriesData));
 
 // Encuentre qué letra se utiliza muchas veces como inicial de un nombre de país del array de países (ej. Finland, Fiji, France etc)
 
+const findMoreRepetitionLetter = (array = countriesData) => {
+  let array2 = [...array];
 
+  const lettersCitys = [];
+
+  array2.forEach((element) => {
+    const firstChartOfCityName = element.name.split("")[0];
+
+    if (!lettersCitys[firstChartOfCityName]) {
+      lettersCitys[firstChartOfCityName] = 0;
+    }
+
+    lettersCitys[firstChartOfCityName]++;
+  });
+
+  return lettersCitys;
+};
+// console.log(findMoreRepetitionLetter());
 
 // Utiliza la información de los países, en la carpeta de datos. Ordena los países por nombre, por capital, por población
 
+const sortedName = [...countriesData].sort((a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});
+
+const sortedCapital = [...countriesData].sort((a, b) => {
+  if (a.capital < b.capital) return -1;
+  if (a.capital > b.capital) return 1;
+  return 0;
+});
+
+const sortedPopulation = [...countriesData].sort(
+  (a, b) => a.population - b.population
+);
+
+console.log(" nombre:", sortedName);
+console.log(" capital:", sortedCapital);
+console.log(" población:", sortedPopulation);
 // *** Encuentre las 10 lenguas más habladas:
 // El resultado debería ser el siguiente
 // console.log(mostSpokenLanguages(countries, 10))
